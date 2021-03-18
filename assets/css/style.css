@@ -168,7 +168,7 @@ nav { flex-basis: 57%; }
 /* banner start */
 .banner { 
   position: relative;
-  background-color: #5a080f;
+  background-color: #d48e1c;
 }
 
 .slide { display: none; }
@@ -180,7 +180,7 @@ nav { flex-basis: 57%; }
 .slider-content {
   width: 25%;
   position: absolute;
-  right: 9%;
+  right: 8%;
   top: 42%;
   text-align: center;
   color: #ded9d9;
@@ -198,12 +198,45 @@ nav { flex-basis: 57%; }
 }
 
 .slider-content .btn a {
+  padding: 11px 30%;
+  margin-top: 18px;
   font-size: 30px;
   color: #ded9d9;
-  font-size: 30px;
-    color: #ded9d9;
-    padding: 10px 20px;
+  font-size: 27px;
+  color: #ded9d9;
+  background-color: #830a1b;
+  box-shadow: 0 0 5px #830a1b;
 }
+
+.slider-control { 
+  width: 9%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2%;
+}
+
+.slider-control li {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
+}
+.slider-control li.active { background-color: #000; }
+
+.slider-control li a {
+
+  background-color: #ded9d9;
+  text-indent: -99999px;
+  height: 0;
+  margin-bottom: 6px;
+  float: left;
+}
+
+.banner-search { background-color: #000; }
 /* banner end */
 
 
