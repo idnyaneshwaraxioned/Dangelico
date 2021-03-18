@@ -239,7 +239,65 @@ nav { flex-basis: 57%; }
 .banner-search { background-color: #000; }
 /* banner end */
 
+/* dealer search section start */
+.dealer-search { 
+  padding: 30px 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  background-color: #000;
+}  
 
+.dealer-search .wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dealer-search .wrapper h3 {
+  margin-right: 2%;
+  font-size: 31px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-basis: 29.3%;
+}
+
+.form-control { flex-basis: 89%; }
+
+form input[type="text"] {
+  width: 100%;
+  padding: 9px 17px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+form button {
+  outline: none;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+}
+/* dealer search section end */
+
+/* New and history section start  */
+.history-new .wrapper {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.history-imgs {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+/* New and history section end  */
 
 
 
