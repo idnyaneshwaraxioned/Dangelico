@@ -301,7 +301,8 @@ form button {
 
 .new img,
 .history-imgs img,
-.history-bottom img { transition: .6s; }
+.history-bottom img,
+.premiergnigara img { transition: .6s; }
 
 .new:hover img,
 .history-imgs li a:hover img,
@@ -347,16 +348,35 @@ form button {
   color: #ded9d9;
 }
 
-.premier-deluxe .wrapper div { flex-basis: 31%; }
+.premier-deluxe .wrapper div { flex-basis: 31.8%; }
 
 .premiergnigara { position: relative; }
 
 .premiergnigara h3 {
-  padding: 0 16.8%;
+  padding: 9px 17.5%;
   position: absolute;
   bottom: 0;
-  left: 0%;
+  left: 0;
 }
+
+.premier-deluxe .slider { position: relative; }
+
+.premier-deluxe .slider a { color: #fff; }
+
+.btn-prev,
+.btn-next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 58px;
+  color: #fff;
+  transition: .6s;
+}
+
+.btn-prev { left: 6%; }
+.btn-next { right: 6%; }
+
+.btn-prev a:hover { box-shadow: 0 0 15px rgba(0,0,0,.5); }
 /* Premier section end */
 
 
