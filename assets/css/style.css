@@ -338,10 +338,16 @@ form button {
   word-spacing: 2px;
   font-weight: 600;
 }
-
 /* New and history section end  */
 
+/* Premier section start */
+.premier-deluxe .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
+.premier-deluxe .wrapper div { flex-basis: 31%; }
+/* Premier section end */
 
 
 
