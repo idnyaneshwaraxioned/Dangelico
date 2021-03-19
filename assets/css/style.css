@@ -85,6 +85,7 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   font-family: sans-serif;
+  background-color: #EEEDEB;
 }
 
 a { 
@@ -117,8 +118,8 @@ header {
   height: 40px;
   display: none;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 5%;
+  top: 7%;
 }
 
 .bar1,
@@ -158,6 +159,8 @@ nav { flex-basis: 57%; }
   letter-spacing: 1px;
   color: #ded9d9;
 }
+
+.menu-item a:hover { text-shadow: 0 0 5px #fff;}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -166,22 +169,25 @@ nav { flex-basis: 57%; }
   main styling starts here
 =================================*/
 /* banner start */
-.banner { 
-  position: relative;
-  background-color: #d48e1c;
+.banner { position: relative; }
+
+.banner .wrapper { 
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .slide { display: none; }
 
-.slide.active {
-  display: block;
-}
+.slide.active { display: block; }
 
 .slider-content {
-  width: 25%;
+  width: 26%;
   position: absolute;
-  right: 8%;
-  top: 42%;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
   text-align: center;
   color: #ded9d9;
 }
@@ -189,7 +195,7 @@ nav { flex-basis: 57%; }
 .slider-content h2 { font-size: 41px; }
 
 .slider-content p {
-  margin-top: 11px;
+  margin: 18px 0;
   font-size: 20px;
   text-transform: capitalize;
   font-weight: 700;
@@ -198,29 +204,31 @@ nav { flex-basis: 57%; }
 }
 
 .slider-content .btn a {
-  padding: 11px 30%;
-  margin-top: 18px;
-  font-size: 30px;
-  color: #ded9d9;
+  padding: 10px 0;
+  display: block;
   font-size: 27px;
   color: #ded9d9;
   background-color: #830a1b;
   box-shadow: 0 0 5px #830a1b;
+  transition: .6s;
 }
 
+.slider-content .btn a:hover { box-shadow: 0 0 25px rgba(0,0,0,.9); }
+
 .slider-control { 
-  width: 9%;
   display: flex;
   justify-content: space-between;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   bottom: 2%;
+  transform: translateX(-50%);
+  z-index: 3;
 }
 
 .slider-control li {
   width: 19px;
   height: 19px;
+  margin: 0px 7px;
   border-radius: 50%;
   border: 2px solid #fff;
   background-color: #fff;
@@ -228,7 +236,6 @@ nav { flex-basis: 57%; }
 .slider-control li.active { background-color: #000; }
 
 .slider-control li a {
-
   background-color: #ded9d9;
   text-indent: -99999px;
   height: 0;
@@ -236,36 +243,37 @@ nav { flex-basis: 57%; }
   float: left;
 }
 
-.banner-search { background-color: #000; }
 /* banner end */
 
 /* dealer search section start */
 .dealer-search { 
   padding: 30px 0;
-  border-bottom: 1px solid #fff;
-  color: #fff;
+  border-top: 2px solid #fff;
+  color: #ded9d9;
   background-color: #000;
 }  
 
 .dealer-search .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .dealer-search .wrapper h3 {
-  margin-right: 2%;
+  flex-basis: 49%;
   font-size: 31px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  text-align: end;
 }
 
 form {
+  margin-left: 10px;
   display: flex;
-  flex-basis: 29.3%;
+  flex-basis: 49%;
 }
 
-.form-control { flex-basis: 89%; }
+.form-control { flex-basis: 54%; }
 
 form input[type="text"] {
   width: 100%;
@@ -290,17 +298,179 @@ form button {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  color: #ded9d9;
 }
+
+.new { flex-basis: 49%; }
+
+.new figure,
+.premiergnigara figure { position: relative; }
+
+.new figure figcaption,
+.premiergnigara figure figcaption,
+.deluxebedford figure figcaption { 
+  width: 100%;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+  font-size: 31px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: rgba(0,0,0,.3);
+}
+
+.history-new .wrapper .new,
+.history-bottom,
+.premiergnigara,
+.deluxebedford { position: relative; }
+
+.new img,
+.history-imgs img,
+.history-bottom img,
+.premiergnigara img { transition: .6s; }
+
+.new:hover img,
+.history-imgs li a:hover img,
+.history-bottom:hover img,
+.premiergnigara:hover img { opacity: .5; }
+.history { flex-basis: 49%; }
 
 .history-imgs {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
+
+.history-imgs li { flex-basis: 31%; }
+.history-imgs li a:hover img{ opacity: .5; }
+
+.history-bottom figure { position: relative; }
+
+.history-bottom figure figcaption { 
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 31px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
 /* New and history section end  */
 
+/* Premier section start */
+.premier-deluxe .wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: #ded9d9;
+}
 
+.premier-deluxe .wrapper div { flex-basis: 31.8%; }
+.premiergnigara { position: relative; }
+.premier-deluxe .slider { position: relative; }
 
+.btn-prev a,
+.btn-next a{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 58px;
+  color: #fff;
+  transition: .6s;
+}
+
+.btn-prev a { left: 6%; }
+.btn-next a { right: 6%; }
+
+.btn-prev a:hover,
+.btn-next a:hover { box-shadow: 0 0 5px rgba(0,0,0,.5); }
+
+.deluxebedford { position: relative; }
+
+.deluxebedford video {
+  width: 100%;
+  height: 100%;
+}
+
+.video-btn {
+  width: 35%;
+  height: 40%;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid #fff;
+  transition: .6s;
+}
+
+.video-btn a .fa { 
+  font-size: 70px;
+  color: #fff;
+}
+
+.video-btn:hover .fa { color: #2fd4cc; } 
+.video-btn:hover { box-shadow: 0 0 35px rgba(0,0,0,.5); }
+
+.modal {
+  width: 40%;
+  height: 300px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 4;
+}
+
+video { width: 100%; }
+/* Premier section end */
+
+/* Social section start */
+.social .wrapper { 
+  padding: 28px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.social-icons li { margin: 0 16px; }
+
+.social-icons::before,
+.social-icons::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #443F43;
+  position: absolute;
+  top: 50%;
+}
+
+.social-icons::before { left: -21%; }
+.social-icons::after { right: -21%; }
+
+.social-icons a { 
+  padding: 4px 10px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  background: #443F43;
+ }
+
+.social-icons a:hover { box-shadow: 2px 2px 15px rgba(0,0,0,.5); }
+
+/* Social section end */
 
 
 /*=================================
@@ -310,21 +480,263 @@ form button {
 /*=================================
   footer styling starts here
 =================================*/ 
+.footer-top { 
+  padding: 30px 0;
+  color: #b2b2b2;
+  background-color: #000; 
+}
+.footer-top .wrapper { 
+  display: flex;
+  justify-content: space-between;
+}
 
+.footer-top a { color: #bfbebe; }
 
+.footer-top a:hover,
+.footer-bottom a:hover { text-shadow: 0 0 10px #fff; }
 
+.footer-top .wrapper ul li h4,
+.contact h4 {
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
 
+.contact { flex-basis: 32%; }
 
+.contact address {
+  margin-bottom: 15px;
+  width: 56%;
+  font-size: 19px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
 
+.contact div { margin-bottom: 20px; }
 
+.contact div a {
+  margin: 2px 0;
+  color: #b2b2b2;
+}
+
+.email-phone a { 
+  margin: 5px 0;
+  display: block;
+  font-size: 19px;
+ }
+
+.contact div a .fa { 
+  margin-right: 15px;
+  font-size: 19px;
+}
+
+.footer-btn a {
+  padding: 10px 9%;
+  border: 1px solid #fff;
+  margin-top: 15px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.footer-top .wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: 65%;
+}
+
+.footer-top .wrapper ul li { flex-basis: 24%; }
+
+.guitars ul,
+.about ul,
+.connect ul,
+.shop ul{ 
+  display: flex;
+  flex-direction: column;
+}
+
+.guitars ul li,
+.about ul li,
+.connect ul li,
+.shop ul li { margin: 2px 0; }
+
+.footer-top .wrapper ul li a { 
+  font-size: 17px;
+  color: #bfbebe;
+  letter-spacing: 2px;
+}
+
+.footer-bottom { 
+  text-align: center;
+  background-color: #332E34; 
+}
+
+.footer-bottom .wrapper {
+  padding: 13px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom a { 
+  font-size: 12px;
+  color: #857f7f;
+  margin: 0px 18px;
+  letter-spacing: 1px;
+ }
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1204px) {
 
+.hamburger { 
+  display: block;
+  position: absolute;
+  z-index: 6;
+}
 
+.hamburger:hover ~ .menu { display: flex; }
+
+nav { 
+  width: 100%;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  }
+
+.menu { 
+  width: 100%;
+  flex-direction: column;
+  position: absolute;
+  top: 12%;
+  right: 0;
+  z-index: 5;
+  display: none;
+  text-align: center;
+  background-color: #808080;
+}
+  
+.menu .menu-item { margin: 10px 0; }
+  
+.slider-content {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dealer-search .wrapper { 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.footer-top .wrapper { flex-direction: column; }
 
 }  
+
+@media only screen and (max-width: 995px) {
+
+.slider-content { width: 50%; }
+.slider-content h2 { font-size: 28px; }
+
+.slider-content p {
+  margin: 9px 0;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+.slider-content .btn a {
+  padding: 6px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.history-new .wrapper { flex-direction: column; }
+.history { margin-top: 25px; }
+
+.premier-deluxe .wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.premier-deluxe .wrapper div { margin: 10px; }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+.slider-content {
+  width: 100%;
+}
+
+.slider-control li {
+  width: 9px;
+  height: 9px;
+}
+
+.dealer-search .wrapper h3 {
+  font-size: 22px;
+  text-align: center;
+}
+
+form input[type="text"] {
+  padding: 4px 17px;
+  font-size: 14px;
+}
+form button { font-size: 16px; }
+
+.history-imgs { flex-direction: column; }
+.history-imgs li { margin: 10px 0; }
+
+.social-icons li { margin: 0 5px; }
+
+.contact { text-align: center; }
+.contact address { width: 100%; }
+
+.footer-top .wrapper ul { flex-direction: column; }
+
+.footer-menu li,
+.footer-top .wrapper ul li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer-menu { flex-direction: column; }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+.slider-content h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+  
+.slider-content p { 
+  margin: 3px 0;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.slider-content .btn a {
+  padding: 3px;
+  display: inline-block;
+  font-size: 10px;
+}
+
+.slider-control li {
+  width: 4px;
+  height: 4px;
+}
+
+}
